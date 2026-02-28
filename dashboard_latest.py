@@ -64,20 +64,36 @@ def get_secret(key, default=None):
     return os.getenv(key, default)
 
 
+def is_cloud_deployed():
+    """Check if running on Streamlit Cloud"""
+    try:
+        return hasattr(st, "secrets")
+    except:
+        return False
+
+
 gsc_creds = get_secret("GSC_CREDENTIALS_PATH", "service-account.json")
 ga4_creds = get_secret("GA4_CREDENTIALS_PATH", "service-account.json")
 ga4_prop_id = get_secret("GA4_PROPERTY_ID")
 meta_token = get_secret("META_ACCESS_TOKEN")
 meta_page = get_secret("META_PAGE_ID")
 
+# Check if we're on Streamlit Cloud (secrets available) or local (file exists)
+on_cloud = is_cloud_deployed()
+has_gsc_file = Path(DATA_DIR / gsc_creds).exists() if gsc_creds else False
+
 st.sidebar.markdown("### Google Search Console")
-if gsc_creds and Path(DATA_DIR / gsc_creds).exists():
+if on_cloud and gsc_creds:
+    st.sidebar.success(f"✅ Connected (Cloud): {gsc_creds}")
+elif has_gsc_file:
     st.sidebar.success(f"✅ Connected: {gsc_creds}")
 else:
     st.sidebar.warning("⚠️ Demo Mode (no credentials)")
 
 st.sidebar.markdown("### Google Analytics 4")
-if ga4_creds and Path(DATA_DIR / ga4_creds).exists() and ga4_prop_id:
+if on_cloud and ga4_prop_id:
+    st.sidebar.success(f"✅ Connected (Cloud): Property {ga4_prop_id}")
+elif has_gsc_file and ga4_prop_id:
     st.sidebar.success(f"✅ Connected: Property {ga4_prop_id}")
 else:
     st.sidebar.warning("⚠️ Demo Mode (no credentials)")
@@ -86,7 +102,7 @@ st.sidebar.markdown("### Meta/Facebook")
 if meta_token and meta_page:
     st.sidebar.success(f"✅ Connected: Page {meta_page}")
 else:
-    st.sidebar.warning("⚠️ Token expired - needs refresh")
+    st.sidebar.warning("⚠️ Token missing - needs refresh")
 
 st.sidebar.markdown("---")
 st.sidebar.markdown("### Configuration")
