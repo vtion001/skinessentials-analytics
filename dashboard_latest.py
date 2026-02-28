@@ -80,12 +80,11 @@ meta_page = get_secret("META_PAGE_ID")
 
 # Check if we're on Streamlit Cloud (secrets available) or local (file exists)
 on_cloud = is_cloud_deployed()
-has_gsc_file = Path(DATA_DIR / gsc_creds).exists() if gsc_creds else False
 
 st.sidebar.markdown("### Google Search Console")
-if on_cloud and gsc_creds:
-    st.sidebar.success(f"✅ Connected (Cloud): {gsc_creds}")
-elif has_gsc_file:
+if on_cloud:
+    st.sidebar.success(f"✅ Connected (Cloud)")
+elif Path(DATA_DIR / gsc_creds).exists():
     st.sidebar.success(f"✅ Connected: {gsc_creds}")
 else:
     st.sidebar.warning("⚠️ Demo Mode (no credentials)")
@@ -93,7 +92,7 @@ else:
 st.sidebar.markdown("### Google Analytics 4")
 if on_cloud and ga4_prop_id:
     st.sidebar.success(f"✅ Connected (Cloud): Property {ga4_prop_id}")
-elif has_gsc_file and ga4_prop_id:
+elif ga4_prop_id:
     st.sidebar.success(f"✅ Connected: Property {ga4_prop_id}")
 else:
     st.sidebar.warning("⚠️ Demo Mode (no credentials)")
