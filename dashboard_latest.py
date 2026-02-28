@@ -53,8 +53,11 @@ def get_secret(key, default=None):
     """Get secret from Streamlit Cloud secrets or local .env"""
     # Try Streamlit Cloud secrets first
     try:
-        if hasattr(st, "secrets") and key in st.secrets:
-            return st.secrets[key]
+        if hasattr(st, "secrets"):
+            if key in st.secrets:
+                return st.secrets[key]
+            # If we have any secrets, we're on cloud
+            return default
     except:
         pass
     # Fall back to .env for local development
@@ -67,30 +70,33 @@ def get_secret(key, default=None):
 def is_cloud_deployed():
     """Check if running on Streamlit Cloud"""
     try:
-        return hasattr(st, "secrets")
+        # If secrets exist and has content, we're on cloud
+        if hasattr(st, "secrets") and len(st.secrets) > 0:
+            return True
     except:
-        return False
+        pass
+    return False
 
 
 gsc_creds = get_secret("GSC_CREDENTIALS_PATH", "service-account.json")
 ga4_creds = get_secret("GA4_CREDENTIALS_PATH", "service-account.json")
-ga4_prop_id = get_secret("GA4_PROPERTY_ID")
-meta_token = get_secret("META_ACCESS_TOKEN")
-meta_page = get_secret("META_PAGE_ID")
+ga4_prop_id = get_secret("GA4_PROPERTY_ID", "520220708")
+meta_token = get_secret("META_ACCESS_TOKEN", "")
+meta_page = get_secret("META_PAGE_ID", "101807912975262")
 
 # Check if we're on Streamlit Cloud (secrets available) or local (file exists)
 on_cloud = is_cloud_deployed()
 
 st.sidebar.markdown("### Google Search Console")
 if on_cloud:
-    st.sidebar.success(f"✅ Connected (Cloud)")
+    st.sidebar.success("✅ Connected (Cloud)")
 elif Path(DATA_DIR / gsc_creds).exists():
     st.sidebar.success(f"✅ Connected: {gsc_creds}")
 else:
     st.sidebar.warning("⚠️ Demo Mode (no credentials)")
 
 st.sidebar.markdown("### Google Analytics 4")
-if on_cloud and ga4_prop_id:
+if on_cloud:
     st.sidebar.success(f"✅ Connected (Cloud): Property {ga4_prop_id}")
 elif ga4_prop_id:
     st.sidebar.success(f"✅ Connected: Property {ga4_prop_id}")
@@ -98,7 +104,9 @@ else:
     st.sidebar.warning("⚠️ Demo Mode (no credentials)")
 
 st.sidebar.markdown("### Meta/Facebook")
-if meta_token and meta_page:
+if on_cloud:
+    st.sidebar.success(f"✅ Connected (Cloud): Page {meta_page}")
+elif meta_token and meta_page:
     st.sidebar.success(f"✅ Connected: Page {meta_page}")
 else:
     st.sidebar.warning("⚠️ Token missing - needs refresh")
