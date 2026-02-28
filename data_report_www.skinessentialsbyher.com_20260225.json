@@ -1,0 +1,110 @@
+{
+  "site_url": "https://www.skinessentialsbyher.com",
+  "analysis_period_days": 7,
+  "generated_at": "2026-02-25T23:51:55.198160",
+  "overall_score": 65.21,
+  "scores": {
+    "search_visibility": 61.175,
+    "ga4_performance": 68.25,
+    "meta_performance": 50.0,
+    "technical_health": 75,
+    "content_performance": 75,
+    "overall": 65.21
+  },
+  "channels": {
+    "gsc": {
+      "total_queries": 5,
+      "total_clicks": 1650,
+      "total_impressions": 19300,
+      "average_ctr": 0.0855,
+      "average_position": 3.69,
+      "top_3_rankings": 1,
+      "positions_4_10": 4,
+      "top_queries": [
+        {
+          "keys": [
+            "seo services"
+          ],
+          "clicks": 450,
+          "impressions": 5000,
+          "ctr": 0.09,
+          "position": 3.5
+        },
+        {
+          "keys": [
+            "search engine optimization"
+          ],
+          "clicks": 380,
+          "impressions": 4200,
+          "ctr": 0.09,
+          "position": 4.2
+        },
+        {
+          "keys": [
+            "google search console"
+          ],
+          "clicks": 320,
+          "impressions": 3800,
+          "ctr": 0.084,
+          "position": 2.8
+        },
+        {
+          "keys": [
+            "meta description"
+          ],
+          "clicks": 290,
+          "impressions": 3500,
+          "ctr": 0.083,
+          "position": 3.1
+        },
+        {
+          "keys": [
+            "technical seo audit"
+          ],
+          "clicks": 210,
+          "impressions": 2800,
+          "ctr": 0.075,
+          "position": 5.2
+        }
+      ]
+    },
+    "ga4": {
+      "total_sessions": 12450,
+      "total_users": 9820,
+      "total_pageviews": 35800,
+      "avg_session_duration": 165.0,
+      "bounce_rate": 0.38,
+      "conversions": 156,
+      "conversion_rate": 0.0125,
+      "device_breakdown": {
+        "desktop": 215,
+        "mobile": 85
+      },
+      "source_breakdown": {
+        "google": 205,
+        "direct": 95
+      }
+    },
+    "meta": {
+      "total_impressions": 380797,
+      "total_engaged_users": 19039,
+      "total_fans": 61827,
+      "engagement_rate": 0.05,
+      "avg_daily_impressions": 54399,
+      "avg_daily_engaged": 2719,
+      "page_views": 0,
+      "post_engagements": 0
+    }
+  },
+  "recommendations": [
+    {
+      "priority": "Medium",
+      "channel": "GA4",
+      "title": "Top Traffic Sources",
+      "description": "Main sources: google, direct",
+      "impact": "Info",
+      "effort": "Low"
+    }
+  ],
+  "summary": "\n## Executive Summary\n\n**Overall Performance: 65.2/100 (Grade D)**\n\n### Channel Performance\n- **Search (GSC)**: 1,650 clicks, 3.7 avg position\n- **Web (GA4)**: 12,450 sessions, 38.0% bounce rate\n- **Social (Meta)**: 380,797 impressions, 61,827 followers\n"
+}

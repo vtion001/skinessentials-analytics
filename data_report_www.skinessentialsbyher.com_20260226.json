@@ -1,0 +1,133 @@
+{
+  "site_url": "https://www.skinessentialsbyher.com",
+  "analysis_period_days": 6,
+  "generated_at": "2026-02-26T10:26:39.636428",
+  "overall_score": 46.87,
+  "scores": {
+    "search_visibility": 13.484000000000002,
+    "ga4_performance": 38.9,
+    "meta_performance": 50.0,
+    "technical_health": 75,
+    "content_performance": 75,
+    "overall": 46.87
+  },
+  "channels": {
+    "gsc": {
+      "total_queries": 6,
+      "total_clicks": 0,
+      "total_impressions": 18,
+      "average_ctr": 0.0,
+      "average_position": 15.61,
+      "top_3_rankings": 0,
+      "positions_4_10": 4,
+      "top_queries": [
+        {
+          "keys": [
+            "her skincare philippines skin essentials products"
+          ],
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 14
+        },
+        {
+          "keys": [
+            "skin essentials"
+          ],
+          "clicks": 0,
+          "impressions": 5,
+          "ctr": 0,
+          "position": 37
+        },
+        {
+          "keys": [
+            "skin essentials by her"
+          ],
+          "clicks": 0,
+          "impressions": 7,
+          "ctr": 0,
+          "position": 6.142857142857143
+        },
+        {
+          "keys": [
+            "skin essentials by her review"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 9
+        },
+        {
+          "keys": [
+            "skin essentials by her review 500cc"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 4
+        },
+        {
+          "keys": [
+            "skin essentials by her reviews"
+          ],
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 6
+        }
+      ]
+    },
+    "ga4": {
+      "total_sessions": 27,
+      "total_users": 22,
+      "total_pageviews": 72,
+      "avg_session_duration": 0,
+      "bounce_rate": 0.611,
+      "conversions": 0,
+      "conversion_rate": 0.0,
+      "device_breakdown": {
+        "desktop": 18,
+        "mobile": 35,
+        "tablet": 3
+      },
+      "source_breakdown": {
+        "(direct)": 28,
+        "m.facebook.com": 13,
+        "google": 8,
+        "l.facebook.com": 2,
+        "lm.facebook.com": 2,
+        "(not set)": 2,
+        "l.instagram.com": 1
+      }
+    },
+    "meta": {
+      "total_impressions": 380797,
+      "total_engaged_users": 19039,
+      "total_fans": 61830,
+      "engagement_rate": 0.05,
+      "avg_daily_impressions": 54399,
+      "avg_daily_engaged": 2719,
+      "page_views": 0,
+      "post_engagements": 0
+    }
+  },
+  "recommendations": [
+    {
+      "priority": "High",
+      "channel": "GA4",
+      "title": "Reduce Bounce Rate",
+      "description": "Bounce rate is 61.1%. Improve content engagement.",
+      "impact": "Medium",
+      "effort": "Medium"
+    },
+    {
+      "priority": "Medium",
+      "channel": "GA4",
+      "title": "Top Traffic Sources",
+      "description": "Main sources: (direct), m.facebook.com, google",
+      "impact": "Info",
+      "effort": "Low"
+    }
+  ],
+  "summary": "\n## Executive Summary\n\n**Overall Performance: 46.9/100 (Grade F)**\n\n### Channel Performance\n- **Search (GSC)**: 0 clicks, 15.6 avg position\n- **Web (GA4)**: 27 sessions, 61.1% bounce rate\n- **Social (Meta)**: 380,797 impressions, 61,830 followers\n"
+}

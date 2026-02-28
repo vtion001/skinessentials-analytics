@@ -1,0 +1,19 @@
+[runner]
+magicEnabled = true
+
+[server]
+headless = true
+enableCORS = false
+enableXsrfProtection = true
+
+[browser]
+gatherUsageStats = false
+serverAddress = "localhost"
+port = 8501
+
+[client]
+showErrorDetails = true
+
+[secrets]
+# For local development, use .env file
+# For Streamlit Cloud deployment, add these secrets in the settings

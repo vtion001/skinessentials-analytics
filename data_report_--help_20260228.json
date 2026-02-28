@@ -1,0 +1,60 @@
+{
+  "site_url": "--help",
+  "analysis_period_days": 30,
+  "generated_at": "2026-02-28T17:52:49.918429",
+  "overall_score": 56.0,
+  "scores": {
+    "search_visibility": 50,
+    "ga4_performance": 44.99999999999999,
+    "meta_performance": 50,
+    "technical_health": 75,
+    "content_performance": 75,
+    "overall": 56.0
+  },
+  "channels": {
+    "gsc": {},
+    "ga4": {
+      "total_sessions": 76,
+      "total_users": 63,
+      "total_pageviews": 168,
+      "avg_session_duration": 0,
+      "bounce_rate": 0.55,
+      "conversions": 0,
+      "conversion_rate": 0.0,
+      "device_breakdown": {
+        "desktop": 28,
+        "mobile": 45,
+        "tablet": 3
+      },
+      "source_breakdown": {
+        "(direct)": 42,
+        "m.facebook.com": 19,
+        "google": 8,
+        "(not set)": 2,
+        "l.facebook.com": 2,
+        "lm.facebook.com": 2,
+        "l.instagram.com": 1
+      }
+    },
+    "meta": {}
+  },
+  "recommendations": [
+    {
+      "priority": "High",
+      "channel": "GA4",
+      "title": "Reduce Bounce Rate",
+      "description": "Bounce rate is 55.0%. Improve content engagement.",
+      "impact": "Medium",
+      "effort": "Medium"
+    },
+    {
+      "priority": "Medium",
+      "channel": "GA4",
+      "title": "Top Traffic Sources",
+      "description": "Main sources: (direct), m.facebook.com, google",
+      "impact": "Info",
+      "effort": "Low"
+    }
+  ],
+  "summary": "\n## Executive Summary\n\n**Overall Performance: 56.0/100 (Grade F)**\n\n### Channel Performance\n- **Web (GA4)**: 76 sessions, 55.0% bounce rate\n"
+}

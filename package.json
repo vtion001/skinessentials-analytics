@@ -1,0 +1,183 @@
+{
+  "name": "data-analyst",
+  "version": "1.0.0",
+  "description": "Multi-channel data analyst agent combining Google Search Console, GA4, and Meta Insights for comprehensive web performance analysis",
+  "author": "Data Intelligence Agent",
+  "type": "agent",
+  "category": "data-analytics",
+  "capabilities": [
+    "Google Search Console API integration",
+    "Google Analytics 4 data extraction",
+    "Meta/Facebook Insights API integration",
+    "Cross-channel performance analysis",
+    "Unified dashboard reporting",
+    "Traffic source attribution",
+    "Conversion tracking",
+    "Social media performance metrics",
+    "SEO + Analytics + Social unified scoring"
+  ],
+  "language": "python",
+  "python_version": ">=3.9",
+  "main_script": "data_analyst.py",
+  "entry_point": "data_analyst.py",
+  "dependencies": {
+    "required": [
+      "requests",
+      "python-dotenv",
+      "google-auth",
+      "google-auth-oauthlib",
+      "google-auth-httplib2",
+      "google-api-python-client",
+      "google-analytics-data",
+      "streamlit",
+      "fastapi",
+      "uvicorn",
+      "pydantic",
+      "pydantic-settings"
+    ],
+    "optional": [
+      "pandas",
+      "numpy",
+      "matplotlib",
+      "plotly"
+    ],
+    "dev": [
+      "pytest",
+      "ruff",
+      "mypy"
+    ]
+  },
+  "env_variables": [
+    {
+      "name": "GSC_CREDENTIALS_PATH",
+      "description": "Path to Google service account JSON for GSC and GA4",
+      "required": false,
+      "default": "service-account.json"
+    },
+    {
+      "name": "GA4_PROPERTY_ID",
+      "description": "GA4 Property ID (e.g., 520220708)",
+      "required": false,
+      "default": null
+    },
+    {
+      "name": "GA4_CREDENTIALS_PATH",
+      "description": "Path to Google service account JSON for GA4 (separate from GSC)",
+      "required": false,
+      "default": null
+    },
+    {
+      "name": "META_ACCESS_TOKEN",
+      "description": "Meta/Facebook Page access token",
+      "required": false,
+      "default": null
+    },
+    {
+      "name": "META_APP_ID",
+      "description": "Meta App ID (e.g., 764719166731391)",
+      "required": false,
+      "default": null
+    },
+    {
+      "name": "META_PAGE_ID",
+      "description": "Facebook Page ID for insights (e.g., 101807912975262)",
+      "required": false,
+      "default": null
+    }
+  ],
+  "usage": {
+    "command": "python data_analyst.py <website_url> [--days 30] [--channels gsc,ga4,meta]",
+    "examples": [
+      "python data_analyst.py https://example.com",
+      "python data_analyst.py https://example.com --days 30 --channels gsc,ga4,meta",
+      "python data_analyst.py https://example.com --channels ga4,meta"
+    ]
+  },
+  "input_schema": {
+    "website_url": {
+      "type": "string",
+      "description": "Website URL to analyze",
+      "required": true
+    },
+    "days": {
+      "type": "integer",
+      "description": "Number of days to analyze",
+      "default": 30,
+      "required": false
+    },
+    "channels": {
+      "type": "string",
+      "description": "Comma-separated channels: gsc,ga4,meta",
+      "default": "gsc,ga4,meta",
+      "required": false
+    }
+  },
+  "output_schema": {
+    "overall_score": "float (0-100)",
+    "scores": {
+      "search_visibility": "float (0-100)",
+      "ga4_performance": "float (0-100)",
+      "meta_performance": "float (0-100)",
+      "technical_health": "float (0-100)",
+      "content_performance": "float (0-100)",
+      "overall": "float (0-100)"
+    },
+    "channels": {
+      "gsc": "object",
+      "ga4": "object",
+      "meta": "object"
+    },
+    "recommendations": "array"
+  },
+  "features": [
+    {
+      "name": "GSC Integration",
+      "description": "Google Search Console search analytics, query performance, CTR optimization"
+    },
+    {
+      "name": "GA4 Integration", 
+      "description": "Google Analytics 4 sessions, users, conversions, device/source breakdown"
+    },
+    {
+      "name": "Meta Integration",
+      "description": "Facebook Page insights: impressions, reach, engagement, follower growth"
+    },
+    {
+      "name": "Unified Scoring",
+      "description": "Weighted multi-channel performance scoring (GSC 20%, GA4 30%, Meta 20%)"
+    },
+    {
+      "name": "Cross-Channel Attribution",
+      "description": "Compare traffic sources across search, web analytics, and social"
+    },
+    {
+      "name": "Demo Mode",
+      "description": "Runs with sample data if API credentials not configured"
+    }
+  ],
+  "tags": [
+    "data-analytics",
+    "google-search-console",
+    "google-analytics-4",
+    "meta-insights",
+    "facebook",
+    "seo",
+    "web-analytics",
+    "social-media",
+    "multi-channel",
+    "api-integration"
+  ],
+  "documentation": {
+    "readme": "README.md"
+  },
+  "compatibility": {
+    "platforms": ["macOS", "Linux", "Windows"],
+    "integrations": [
+      "Google Search Console API",
+      "Google Analytics 4 Data API", 
+      "Meta Graph API (Insights)"
+    ]
+  },
+  "created_at": "2026-02-25",
+  "updated_at": "2026-02-25"
+}

@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.DS_Store
+*.log
+.env
+.env.local
+.env.*
+service-account.json
+history/
+frontend/node_modules/
+tableau_data/
+tableau_data_publisher.py
+tableau_publisher.py

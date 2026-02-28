@@ -1,0 +1,160 @@
+{
+  "site_url": "https://www.skinessentialsbyher.com",
+  "analysis_period_days": 6,
+  "generated_at": "2026-02-27T20:22:51.369810",
+  "overall_score": 52.71,
+  "scores": {
+    "search_visibility": 28.885499999999997,
+    "ga4_performance": 48.1,
+    "meta_performance": 50,
+    "technical_health": 75,
+    "content_performance": 75,
+    "overall": 52.71
+  },
+  "channels": {
+    "gsc": {
+      "total_queries": 10,
+      "total_clicks": 3,
+      "total_impressions": 41,
+      "average_ctr": 0.0732,
+      "average_position": 9.46,
+      "top_3_rankings": 2,
+      "positions_4_10": 5,
+      "top_queries": [
+        {
+          "keys": [
+            "skin essentials by her"
+          ],
+          "clicks": 2,
+          "impressions": 17,
+          "ctr": 0.11764705882352941,
+          "position": 5
+        },
+        {
+          "keys": [
+            "skin essentials by her reviews"
+          ],
+          "clicks": 1,
+          "impressions": 3,
+          "ctr": 0.3333333333333333,
+          "position": 4.666666666666666
+        },
+        {
+          "keys": [
+            "her skin essentials products philippines 2026"
+          ],
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 11.666666666666666
+        },
+        {
+          "keys": [
+            "her skincare philippines skin essentials products"
+          ],
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 14
+        },
+        {
+          "keys": [
+            "jc hers"
+          ],
+          "clicks": 0,
+          "impressions": 6,
+          "ctr": 0,
+          "position": 3.1666666666666665
+        },
+        {
+          "keys": [
+            "skin essentials"
+          ],
+          "clicks": 0,
+          "impressions": 5,
+          "ctr": 0,
+          "position": 37
+        },
+        {
+          "keys": [
+            "skin essentials by her review"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 9
+        },
+        {
+          "keys": [
+            "skin essentials by her review 500cc"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 4
+        },
+        {
+          "keys": [
+            "skin essentials by hers"
+          ],
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 3
+        },
+        {
+          "keys": [
+            "skinessentials"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 3
+        }
+      ]
+    },
+    "ga4": {
+      "total_sessions": 39,
+      "total_users": 33,
+      "total_pageviews": 100,
+      "avg_session_duration": 0,
+      "bounce_rate": 0.519,
+      "conversions": 0,
+      "conversion_rate": 0.0,
+      "device_breakdown": {
+        "desktop": 21,
+        "mobile": 44,
+        "tablet": 3
+      },
+      "source_breakdown": {
+        "(direct)": 37,
+        "m.facebook.com": 16,
+        "google": 8,
+        "(not set)": 2,
+        "l.facebook.com": 2,
+        "lm.facebook.com": 2,
+        "l.instagram.com": 1
+      }
+    },
+    "meta": {}
+  },
+  "recommendations": [
+    {
+      "priority": "High",
+      "channel": "GA4",
+      "title": "Reduce Bounce Rate",
+      "description": "Bounce rate is 51.9%. Improve content engagement.",
+      "impact": "Medium",
+      "effort": "Medium"
+    },
+    {
+      "priority": "Medium",
+      "channel": "GA4",
+      "title": "Top Traffic Sources",
+      "description": "Main sources: (direct), m.facebook.com, google",
+      "impact": "Info",
+      "effort": "Low"
+    }
+  ],
+  "summary": "\n## Executive Summary\n\n**Overall Performance: 52.7/100 (Grade F)**\n\n### Channel Performance\n- **Search (GSC)**: 3 clicks, 9.5 avg position\n- **Web (GA4)**: 39 sessions, 51.9% bounce rate\n"
+}
